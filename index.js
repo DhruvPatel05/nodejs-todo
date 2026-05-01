@@ -1,3 +1,10 @@
+require("dotenv").config();
+
+const dbUrl = process.env.DB_URL;
+
+if (!dbUrl) {
+  throw new Error("Missing required environment variable: DB_URL");
+}
 //dependencies required for the app
 var express = require("express");
 var bodyParser = require("body-parser");
