@@ -5,6 +5,9 @@ const dbUrl = process.env.DB_URL;
 if (!dbUrl) {
   throw new Error("Missing required environment variable: DB_URL");
 }
+const startupMessage = new Buffer("Broken demo app started");
+console.log(startupMessage.toString());
+
 //dependencies required for the app
 var express = require("express");
 var bodyParser = require("body-parser");
